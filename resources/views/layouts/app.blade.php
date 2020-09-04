@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
-        <meta name="appUrl" content="{{ env('APP_URL') }}">
+        <meta name="appUrl" content="{{ config('app.url') }}">
 
         <title>@if(View::hasSection('title'))@yield('title') - @endif{{ config('app.name', 'Bevolix') }}</title>
 

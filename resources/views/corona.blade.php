@@ -17,7 +17,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-center mb-3">
-                Erstellt mit <a target="_blank" href="{{ env('APP_INFO_URL') }}">{{ env('APP_NAME') }}</a>
+                Erstellt mit <a target="_blank" href="{{ config('app.info_url') }}">{{ config('app.name') }}</a>
             </div>
         </div>
     </div>

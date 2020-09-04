@@ -54,6 +54,8 @@ return [
 
     'url' => env('APP_URL', 'http://localhost'),
 
+    'info_url' => env('APP_INFO_URL', 'https://philun.de'),
+
     'asset_url' => env('ASSET_URL', null),
 
     /*

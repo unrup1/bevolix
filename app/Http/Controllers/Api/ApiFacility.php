@@ -39,7 +39,7 @@ class ApiFacility extends Controller
             'user_id' => Auth::id()
         ]);
 
-        $hashids = new Hashids(env('APP_KEY'), 8);
+        $hashids = new Hashids(config('app.key'), 8);
         $facility->corona_hash = $hashids->encode($facility->id);
         $facility->save();
 

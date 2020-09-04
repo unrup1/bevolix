@@ -15,7 +15,7 @@ class QrCode extends Controller
     }
 
     private function getQrCode(Facility $facility): \Endroid\QrCode\QrCode {
-        $url = env('APP_URL') . '/c/' . $facility->corona_hash;
+        $url = config('app.url') . '/c/' . $facility->corona_hash;
 
         $qrCode = new \Endroid\QrCode\QrCode($url);
         return $qrCode;

@@ -24,7 +24,7 @@ class ApiAuth extends Controller
 
         $user = User::where('email', $request->email)->first();
 
-        $token = $user->createToken(env('APP_NAME'))->plainTextToken;
+        $token = $user->createToken(config('app.name'))->plainTextToken;
 
         $response = [
             'user' => $user,
