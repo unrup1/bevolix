@@ -30,7 +30,7 @@ Route::post('/login', 'Api\ApiAuth@login');
 Route::prefix('user/{id}')->group(function () {
     Route::get('/', 'Api\ApiUser@getOne');
     Route::post('/', 'Api\ApiUser@update');
-    Route::post('/password', 'Api\ApiUser@changePasword');
+    Route::post('/password', 'Api\ApiUser@changePassword');
     Route::delete('/', 'Api\ApiUser@delete');
 });
 
