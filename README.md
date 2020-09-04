@@ -13,3 +13,4 @@ Sie können Sich unter diesen Adresse anmelden und alle Funktionen ausprobieren.
 - QR Code
 - Schneller Export der Daten per CSV
 - Generierung einer Datenschutzerklärung für die Einrichtung
+- Automatisches Löschen der Daten nach 30 Tagen
