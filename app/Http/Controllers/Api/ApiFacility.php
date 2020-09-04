@@ -186,7 +186,7 @@ class ApiFacility extends Controller
         $template->saveAs($pathForDocx);
 
         // render docx to pdf
-        ConvertApi::setApiSecret($_ENV['CONVERT_API_SECRET']);
+        ConvertApi::setApiSecret(config('app.convert_api_secret'));
         $result = ConvertApi::convert('pdf', [
             'File' => $pathForDocx,
             'PdfTitle' => 'Datenschutzerklärung',

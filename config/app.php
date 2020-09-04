@@ -231,4 +231,9 @@ return [
 
     ],
 
+
+    /**
+     *
+     */
+    'convert_api_secret' => env('CONVERT_API_SECRET')
 ];
