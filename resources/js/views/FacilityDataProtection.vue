@@ -20,12 +20,12 @@
                         <h3>Datenschutzerklärung erstellen</h3>
                         <ValidationObserver v-slot="{ handleSubmit}">
                             <form @submit.prevent="handleSubmit(onGenerate)" novalidate>
-                                <FormInput name="Verantwortlich Stelle" id="privacy_name" rules="required|max:255" v-model.trim="generate.privacy_name"></FormInput>
-                                <FormInput name="Firmenname" id="facility_name" rules="required|max:255" v-model.trim="generate.facility_name"></FormInput>
-                                <FormInput name="Firmenadresse" id="facility_address" rules="required|max:255" v-model.trim="generate.facility_address"></FormInput>
-                                <FormInput name="Firmen PLZ und Ort" id="facility_location" rules="required|max:255" v-model.trim="generate.facility_location"></FormInput>
-                                <FormInput name="Vertreten durch (Inhaber)" id="owner_name" rules="required|max:255" v-model.trim="generate.owner_name"></FormInput>
-                                <FormInput name="Telefonnummer" id="telephone_number" rules="required|max:255" v-model.trim="generate.telephone_number"></FormInput>
+                                <FormInput name="Verantwortlich Stelle" id="privacy_name" rules="required|max:255" v-model="generate.privacy_name"></FormInput>
+                                <FormInput name="Firmenname" id="facility_name" rules="required|max:255" v-model="generate.facility_name"></FormInput>
+                                <FormInput name="Firmenadresse" id="facility_address" rules="required|max:255" v-model="generate.facility_address"></FormInput>
+                                <FormInput name="Firmen PLZ und Ort" id="facility_location" rules="required|max:255" v-model="generate.facility_location"></FormInput>
+                                <FormInput name="Vertreten durch (Inhaber)" id="owner_name" rules="required|max:255" v-model="generate.owner_name"></FormInput>
+                                <FormInput name="Telefonnummer" id="telephone_number" rules="required|max:255" v-model="generate.telephone_number"></FormInput>
                                 <div class="form-group">
                                     <button type="submit" class="btn btn-primary">
                                         Erstellen
