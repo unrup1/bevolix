@@ -54,7 +54,7 @@ export default new Vuex.Store({
         },
 
         logout ({ commit }) {
-            this.$http.post('/logout').then(response => {
+            axios.post('/logout').then(response => {
                 // nothing to do
             });
             commit('clearAllUserData');
