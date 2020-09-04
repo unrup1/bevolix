@@ -1,0 +1,54 @@
+// Fonts
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
+// Variables
+@import 'variables';
+
+// Bootstrap
+@import '~bootstrap/scss/bootstrap';
+
+// Quill
+@import '~quill/dist/quill.core'; // import styles
+@import '~quill/dist/quill.snow'; // for snow theme
+
+/**
+ Quill Min Height
+ */
+.ql-editor {
+    min-height: 7rem;
+}
+
+/**
+ IOnicons
+ */
+ion-icon.big {
+    font-size: 6rem;
+    --ionicon-stroke-width: 16px;
+}
+
+.btn > ion-icon {
+    margin-bottom: calc(0.9rem * -0.15);
+}
+
+/**
+ QR Code
+ */
+.qr-code-no-border {
+    margin: -10px;
+}
+
+/**
+ Logout button
+ */
+.btn-logout:hover {
+    background-color: $white;
+    border-color: $red;
+    color: $red !important;
+}
+
+/**
+ Colors
+ */
+.bg-gray {
+    background-color: $gray-200;
+}
