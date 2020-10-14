@@ -64,6 +64,13 @@ const router = new VueRouter({
                 auth: false
             }
         }, {
+            path: '/password/reset/:token',
+            name: 'password.reset.form',
+            component: () => import(/* webpackChunkName: "AuthResetPassword" */ './views/Auth/AuthResetForm.vue'),
+            meta: {
+                auth: false
+            }
+        }, {
             path: '/register',
             name: 'register',
             component: () => import(/* webpackChunkName: "AuthResetPassword" */ './views/Auth/AuthRegister.vue'),
