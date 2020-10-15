@@ -12,8 +12,6 @@ use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\Controller;
 use PhpOffice\PhpWord\TemplateProcessor;
 
-;
-
 class ApiFacility extends Controller
 {
     public function __construct()
@@ -61,11 +59,6 @@ class ApiFacility extends Controller
     }
 
     public function update(Request $request, int $id) {
-        $request->validate([
-            'name' => 'required|max:255',
-            'description' => 'nullable'
-        ]);
-
         $facility = Facility::find($id);
 
         if ($facility === null) {
@@ -75,6 +68,11 @@ class ApiFacility extends Controller
         if ($facility->user_id !== Auth::id()) {
             return response([], 403);
         }
+
+        $request->validate([
+            'name' => 'required|max:255',
+            'description' => 'nullable'
+        ]);
 
         $facility->name = $request->name;
         $facility->description = $request->description;
@@ -96,7 +94,7 @@ class ApiFacility extends Controller
 
         $facility->delete();
 
-        return response([]);
+        return response(['deleted' => true]);
     }
 
     public function getGuests(int $id) {

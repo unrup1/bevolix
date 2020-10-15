@@ -43,9 +43,9 @@ Route::prefix('user/{id}')->group(function () {
  */
 Route::prefix('facility')->group(function () {
     Route::get('/', 'Api\ApiFacility@getAll');
-    Route::put('/','Api\ApiFacility@create' );
+    Route::post('/','Api\ApiFacility@create' );
     Route::get('/{id}', 'Api\ApiFacility@getOne');
-    Route::post('/{id}', 'Api\ApiFacility@update');
+    Route::put('/{id}', 'Api\ApiFacility@update');
     Route::delete('/{id}', 'Api\ApiFacility@delete');
     Route::get('/{id}/guest', 'Api\ApiFacility@getGuests');
     Route::get('/{facility}/data-protection', 'Api\ApiFacility@getDataProtection');
