@@ -15,9 +15,9 @@ class ApiFacilityTest extends TestCase
     public function setUp(): void
     {
         parent::setUp();
-        $this->user = factory(User::class)->create();
-        $this->noFacilityUser = factory(User::class)->create();
-        $this->facility = factory(Facility::class)->create([
+        $this->user = User::factory()->create();
+        $this->noFacilityUser = User::factory()->create();
+        $this->facility = Facility::factory()->create([
             'user_id' => $this->user
         ]);
     }
@@ -84,7 +84,7 @@ class ApiFacilityTest extends TestCase
 
     public function testGetOne()
     {
-        $facility = factory(Facility::class)->create([
+        $facility = Facility::factory()->create([
             'user_id' => $this->user
         ]);
 
@@ -99,7 +99,7 @@ class ApiFacilityTest extends TestCase
 
     public function testUpdate()
     {
-        $facility = factory(Facility::class)->create([
+        $facility = Facility::factory()->create([
             'user_id' => $this->user
         ]);
 
@@ -118,7 +118,7 @@ class ApiFacilityTest extends TestCase
 
     public function testUpdateForValidation()
     {
-        $facility = factory(Facility::class)->create([
+        $facility = Facility::factory()->create([
             'user_id' => $this->user
         ]);
 
@@ -136,7 +136,7 @@ class ApiFacilityTest extends TestCase
 
     public function testDelete()
     {
-        $facility = factory(Facility::class)->create([
+        $facility = Facility::factory()->create([
             'user_id' => $this->user
         ]);
 

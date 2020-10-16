@@ -52,8 +52,8 @@ class GeneralTest extends TestCase
     }
 
     public function testCoronaForm() {
-        $user = factory(User::class)->create();
-        $facility = factory(Facility::class)->create([
+        $user = User::factory()->create();
+        $facility = Facility::factory()->create([
             'user_id' => $user
         ]);
 

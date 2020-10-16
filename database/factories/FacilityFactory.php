@@ -1,16 +1,33 @@
 <?php
 
-/** @var \Illuminate\Database\Eloquent\Factory $factory */
+namespace Database\Factories;
 
 use App\Facility;
-use Faker\Generator as Faker;
+use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
-$factory->define(Facility::class, function (Faker $faker) {
-    return [
-        'name' => $faker->name,
-        'description' => $faker->text,
-        'has_image' => false,
-        'corona_hash' => Str::random(6),
-        'user_id' => null
-    ];
-});
+class FacilityFactory extends Factory
+{
+    /**
+     * The name of the factory's corresponding model.
+     *
+     * @var string
+     */
+    protected $model = Facility::class;
+
+    /**
+     * Define the model's default state.
+     *
+     * @return array
+     */
+    public function definition()
+    {
+        return [
+            'name' => $this->faker->name,
+            'description' => $this->faker->text,
+            'has_image' => false,
+            'corona_hash' => Str::random(6),
+            'user_id' => null
+        ];
+    }
+}
