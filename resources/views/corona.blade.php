@@ -21,6 +21,13 @@
             </div>
         </div>
     </div>
+    <div class="container">
+        <div class="col text-center">
+            <a href="https://github.com/unrup1/bevolix" target="_blank"><ion-icon name="logo-github"></ion-icon> Github</a>
+            <a class="ml-3" href="/imprint">Impressum</a>
+            <a class="ml-3" href="/privacy-policy">Datenschutzerklärung</a>
+        </div>
+    </div>
 
     <!-- App -->
     <script src="{{ mix('js/corona-form.js') }}"></script>

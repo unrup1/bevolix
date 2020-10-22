@@ -74,5 +74,8 @@
             @yield('content')
         </main>
     </div>
+
+    <!-- Umami -->
+    @production <script async defer data-website-id="{{ env('UMAMI_ID') }}" src="https://{{ env('UMAMI_DOMAIN') }}/umami.js"></script> @endproduction
 </body>
 </html>

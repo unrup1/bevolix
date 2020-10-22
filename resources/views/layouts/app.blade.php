@@ -23,6 +23,9 @@
         <!-- Ionicons -->
         <script type="module" src="https://unpkg.com/ionicons@5.1.2/dist/ionicons/ionicons.esm.js"></script>
 
+        <!-- Umami -->
+        @production <script async defer data-website-id="{{ env('UMAMI_ID') }}" src="https://{{ env('UMAMI_DOMAIN') }}/umami.js"></script> @endproduction
+
         @yield('js')
     </body>
 </html>

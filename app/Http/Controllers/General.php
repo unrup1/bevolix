@@ -47,4 +47,14 @@ class General extends Controller
             'facility' => $facility
         ]);
     }
+
+    public function imprint() {
+        return view('imprint');
+    }
+
+    public function privacyPolicy() {
+        return view('privacy-policy');
+    }
+
+
 }

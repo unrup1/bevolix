@@ -37,6 +37,12 @@ Route::prefix('/facility/{id}/qr')->group(function() {  // middleware('auth:sanc
 Route::get('/facility/{id}/guest/export', 'ExportDocument@exportGuests');
 
 /**
+ * Imprint & Privacy Policy
+ */
+Route::get('/imprint', 'General@imprint');
+Route::get('/privacy-policy', 'General@privacyPolicy');
+
+/**
  * SPA
  */
 // override Login routes for SPA

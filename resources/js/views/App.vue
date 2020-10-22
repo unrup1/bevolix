@@ -52,6 +52,14 @@
         <main class="py-4">
             <router-view></router-view>
         </main>
+
+        <div class="container">
+            <div class="col text-center">
+                <a href="https://github.com/unrup1/bevolix" target="_blank"><ion-icon name="logo-github"></ion-icon> Github</a>
+                <a class="ml-3" href="/imprint">Impressum</a>
+                <a class="ml-3" href="/privacy-policy">Datenschutzerklärung</a>
+            </div>
+        </div>
     </div>
 </template>
 <script>
