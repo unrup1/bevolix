@@ -151,25 +151,7 @@ class ApiFacilityTest extends TestCase
         $this->assertDeleted($facility);
     }
 
-    public function routeWhenNoAuthorizationProvider() {
-        yield ['get', '/api/facility/'];
-        yield ['put', '/api/facility/'];
-        yield ['delete', '/api/facility/'];
-    }
 
-    /**
-     * @dataProvider routeWhenNoAuthorizationProvider
-     */
-    public function testWhenNoAuthorization($method, $route)
-    {
-        $response = $this
-            ->actingAs($this->noFacilityUser)
-            ->$method($route . $this->facility->id);
-
-        $response
-            ->assertStatus(403)
-            ->assertJson([]);
-    }
 
     public function routeNotFoundProvider() {
         $id = 789789732;

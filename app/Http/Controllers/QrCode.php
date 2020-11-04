@@ -32,7 +32,7 @@ class QrCode extends Controller
         $facility = $facility = \App\Facility::find($id);
 
         if (Auth::id() !== $facility->user_id) {
-            return response('', 403);
+            return response('[]', 403);
         }
 
         $qrCode = $this->getQrCode($facility);
@@ -45,7 +45,7 @@ class QrCode extends Controller
         $facility = $facility = \App\Facility::find($id);
 
         if (Auth::id() !== $facility->user_id) {
-            return response('', 403);
+            return response('[]', 403);
         }
 
         $qrCode = $this->getQrCode($facility);
@@ -58,7 +58,7 @@ class QrCode extends Controller
         $facility = $facility = \App\Facility::find($id);
 
         if (Auth::id() !== $facility->user_id) {
-            return response('', 403);
+            return response('[]', 403);
         }
 
         $qrCode = $this->getQrCode($facility);
