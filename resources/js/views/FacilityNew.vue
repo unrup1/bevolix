@@ -63,7 +63,7 @@ export default {
     methods: {
         onSubmit() {
             return axios
-                .put('/facility', this.facility)
+                .post('/facility', this.facility)
                 .then(({ data }) => {
                     this.$router.push({ name: 'facility.show', params: { id: data.id } })
                 })
