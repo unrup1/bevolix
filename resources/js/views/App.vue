@@ -46,7 +46,7 @@
         </nav>
 
         <div v-if="isLogged && user.email_verified_at === null" class="alert-warning alert shadow-sm text-center">
-            Ihre E-Mail Adresse ist noch nicht verifiziert. Bitte gehen Sie in Ihr E-Mail Konto und klicken Sie auf den Aktivierungslink.
+            Ihre E-Mail Adresse ist noch nicht verifiziert. Bitte gehen Sie in Ihr E-Mail Konto und klicken Sie auf den Aktivierungslink. <a class="link" @click="resendVerify()">Nochmal senden</a>
         </div>
 
         <main class="py-4">
@@ -70,6 +70,9 @@ export default {
         logout() {
             this.$store.dispatch('logout')
             this.$router.push({ name: 'login', query: { logout: true }});
+        },
+        resendVerify() {
+            this.$http.post('email/resend').then(response => null);
         }
     },
     computed: {

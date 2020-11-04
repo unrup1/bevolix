@@ -22,9 +22,12 @@ Route::get('/c/{coronaHash}/data-protection', 'CoronaForm@getDataProtection');
 /**
  * Auth
  */
-/*Route::get('password/reset/{token}', 'Auth\ResetPasswordController@showResetForm')->name('password.reset');
-Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');*/
 Route::get('password/reset/{token}', 'General@spa')->name('password.reset');
+Route::get('/email/verify/{id}/{hash}', function (\Illuminate\Foundation\Auth\EmailVerificationRequest $request) {
+    $request->fulfill();
+
+    return redirect('/home');
+})->middleware(['auth', 'signed'])->name('verification.verify');
 /**
  * Export Documents & Images
  */

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::auth([
     'login' => false,
-    'verify' => true,
+    'verify' => false,
     'reset' => false
 ]);
 Route::post('/login', 'Api\ApiAuth@login');
@@ -27,6 +27,7 @@ Route::post('/login', 'Api\ApiAuth@login');
 Route::get('password/reset', 'Auth\ForgotPasswordController@showLinkRequestForm')->name('password.request');
 Route::post('password/email', 'Auth\ForgotPasswordController@sendResetLinkEmail')->name('password.email');
 Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('password.update');
+Route::post('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');
 
 /**
  * User
